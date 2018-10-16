@@ -1,0 +1,40 @@
+{
+  "name": "tdd",
+  "version": "0.1.0",
+  "description": "To learn more about TDD",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "clear": "rimraf lib",
+    "prepush": "npm run lint",
+    "build": "npm run clear && ./node_modules/.bin/babel --out-dir lib src",
+    "build:watch": "npm run build -- --watch",
+    "test": "./node_modules/.bin/mocha test/**/*.spec.js --require babel-register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raffaeldantass/tdd.git"
+  },
+  "author": "Rafael Dantas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raffaeldantass/tdd/issues"
+  },
+  "homepage": "https://github.com/raffaeldantass/tdd#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.0.0",
+    "babel-cli": "^6.26.0",
+    "chai": "^4.2.0",
+    "eslint": "^5.7.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "husky": "^1.1.2",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0",
+    "rimraf": "^2.6.2"
+  }
+}
